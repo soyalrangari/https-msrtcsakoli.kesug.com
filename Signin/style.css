@@ -1,0 +1,117 @@
+/* Apply a gradient background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container with Glassmorphism effect */
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Hover effect on container */
+.container:hover {
+    transform: scale(1.03);
+}
+
+/* Form inputs */
+input {
+    width: 92%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+    font-weight: bold;
+}
+
+/* Input focus effect with glow */
+input:focus {
+    outline: none;
+    border: 2px solid #ff758c;
+    box-shadow: 0px 0px 10px rgba(255, 117, 140, 0.6);
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(255, 117, 140, 0.4);
+}
+
+/* Button hover effect */
+button:hover {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    box-shadow: 0px 6px 15px rgba(255, 117, 140, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Button Click Animation */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Links and text */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #ffeb3b;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+/* Smooth Entry Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
